@@ -1,6 +1,8 @@
 Recursively JavaScript
 ==========
 
+[![Build Status](https://travis-ci.org/EdgarsZagorskis/recursively.svg?branch=master)](https://travis-ci.org/EdgarsZagorskis/recursively)
+
 Recursively run JavaScript callback function on each item in an array or property in an object
 
 ## Installation
