@@ -2,7 +2,7 @@
   "name": "@edgarszagorskis/recursively",
   "version": "1.0.0",
   "description": "Recursively run callback function on each item in an array or property in an object",
-  "main": "recursively.js",
+  "main": "index.js",
   "scripts": {
     "test": "mocha --reporter spec"
   },
@@ -21,5 +21,12 @@
   "bugs": {
     "url": "https://github.com/EdgarsZagorskis/recursively/issues"
   },
-  "homepage": "https://github.com/EdgarsZagorskis/recursively#readme"
+  "homepage": "https://github.com/EdgarsZagorskis/recursively#readme",
+  "engines": {
+    "node": ">=4.2.4"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^3.3.0"
+  }
 }
