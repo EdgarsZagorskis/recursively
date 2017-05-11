@@ -23,6 +23,37 @@ function enableFirstChild(item, index) {
 
 describe('recursively', function () {
 
+    describe('handling the unhandables', function () {
+        it('should move on null', function () {
+            var data = null;
+            recursively(data, function () {
+
+            });
+            expect(data).to.equal(null);
+        });
+        it('should move on boolean', function () {
+            var data = false;
+            recursively(data, function () {
+
+            });
+            expect(data).to.equal(false);
+        });
+        it('should move on string', function () {
+            var data = 'a';
+            recursively(data, function () {
+
+            });
+            expect(data).to.equal('a');
+        });
+        it('should move on object', function () {
+            var data = {foo: 'bar'};
+            recursively(data, function () {
+
+            });
+            expect(data.foo).to.equal('bar');
+        });
+    });
+
     describe('on array', function () {
 
         it('should multiply items in flat array', function () {
