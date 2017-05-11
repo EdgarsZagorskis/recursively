@@ -11,11 +11,11 @@ Other example for a recursion are arrays of objects with nested objects - for ex
 
 ## Installation
  
-    npm install @edgarszagorskis/recursively -S
+    npm install recursively -S
     
 ## Usage    
    
-    var recursively = require('@edgarszagorskis/recursively');
+    var recursively = require('recursively');
     
     
     /**
@@ -32,7 +32,7 @@ Other example for a recursion are arrays of objects with nested objects - for ex
     
 ### Example 1 - populating 3x3 array with incremental integers from 1 to 9
 
-    var recursively = require('@edgarszagorskis/recursively');
+    var recursively = require('recursively');
     
     var data = [new Array(3).fill(), new Array(3).fill(), new Array(3).fill()];
     var i = 1;
@@ -44,7 +44,7 @@ Other example for a recursion are arrays of objects with nested objects - for ex
         
 ### Example 2 - populate array of 9 items with fibonacci numbers by referring to the previous item in collection
 
-    var recursively = require('@edgarszagorskis/recursively');
+    var recursively = require('recursively');
     
     var data = new Array(9).fill();
     recursively(data, function (item, index, collection) {
@@ -61,7 +61,7 @@ Other example for a recursion are arrays of objects with nested objects - for ex
     
 ### Example 3 - enabling all objects in flat array
 
-    var recursively = require('@edgarszagorskis/recursively');
+    var recursively = require('recursively');
     
     var data = [{enabled: false}, {enabled: false}];
     recursively(data, function(item){
@@ -72,7 +72,7 @@ Other example for a recursion are arrays of objects with nested objects - for ex
         
 ### Example 4 - enabling first child of each submenu
 
-    var recursively = require('@edgarszagorskis/recursively');
+    var recursively = require('recursively');
     
     var menu = [{
         title: 'Level 1',

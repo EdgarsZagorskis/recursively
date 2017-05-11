@@ -1,5 +1,5 @@
 {
-  "name": "@edgarszagorskis/recursively",
+  "name": "recursively",
   "version": "1.1.2",
   "description": "Recursively run callback function on each item in an array",
   "main": "index.js",
@@ -12,6 +12,8 @@
     "url": "git+https://github.com/EdgarsZagorskis/recursively.git"
   },
   "keywords": [
+    "node",
+    "javascript",
     "recursive",
     "function",
     "array",
