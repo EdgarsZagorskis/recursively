@@ -1,6 +1,6 @@
 {
   "name": "recursively",
-  "version": "1.1.2",
+  "version": "1.1.3",
   "description": "Recursively run callback function on each item in an array",
   "main": "index.js",
   "scripts": {
