@@ -1,41 +1,28 @@
 'use strict';
 
-/** Because currently on NPM all isObject-ish packages treat array as object which is .... dumb... */
-
-var isArray = function (item) {
-    return item.constructor === Array
-};
-
-var isObject = function (item) {
-    return item.constructor === Object
-};
-
-function isCollection(item) {
-    return isArray(item) || isObject(item);
-}
-
 /**
- * Recursively run callback on items in a Javascript collection - array or object
- * @param collection
- * @param callback
+ * Recursively run callback on items in a Javascript array
+ * @param arr               An array that can be iterated
+ * @param callback          Callback will receive following arguments:
+ *                          item = value or item in the collection
+ *                          index = index in array
+ *                          arr = original array. So one can change the original value if needed
+ * @param childProperty     Optional child property. If iterated item is an object, recursion will dive into this property
+ * @return void | any       If callback returns a value, it is rewriting the value in array or else it is left intact
  */
-function recursively(collection, callback) {
-    if (isArray(collection)) {
-        collection.forEach(function (val, index) {
-            if (isCollection(val)) {
-                recursively(val, callback);
+function recursively(arr, callback, childProperty) {
+    if (Array.isArray(arr)) {
+        arr.forEach(function (item, index) {
+            if (Array.isArray(item)) {
+                recursively(item, callback, childProperty);
             } else {
-                collection[index] = callback(val);
-            }
-        });
-    }
-    if (isObject(collection)) {
-        Object.keys(collection).forEach(function (key) {
-            var val = collection[key];
-            if (isCollection(val)) {
-                recursively(val, callback);
-            } else {
-                collection[key] = callback(val);
+                var cbResult = callback(item, index, arr);
+                if (typeof cbResult !== 'undefined') {
+                    arr[index] = cbResult;
+                }
+                if (item && Array.isArray(item[childProperty])) {
+                    recursively(item[childProperty], callback, childProperty);
+                }
             }
         });
     }

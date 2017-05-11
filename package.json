@@ -1,7 +1,7 @@
 {
   "name": "@edgarszagorskis/recursively",
-  "version": "1.0.0",
-  "description": "Recursively run callback function on each item in an array or property in an object",
+  "version": "1.1.0",
+  "description": "Recursively run callback function on each item in an array",
   "main": "index.js",
   "scripts": {
     "test": "mocha --reporter spec"
