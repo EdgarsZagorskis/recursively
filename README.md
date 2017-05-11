@@ -23,12 +23,12 @@ Other example for a recursion are arrays of objects with nested objects - for ex
      * @param arr               An array that can be iterated
      * @param callback          Callback will receive following arguments:
      *                          item = value or item in the collection
-     *                          index = index in array
+     *                          index = index of this item in the array
      *                          arr = original array. So one can change the original value if needed
      * @param childProperty     Optional child property. If iterated item is an object, recursion will dive into this property
      * @return void | any       If callback returns a value, it is rewriting the value in array or else it is left intact
      */
-    recursively(input: array, callback: (item?:any, callback?:number, childProperty?:array) => void|any)
+    recursively(input: array, callback: (item?:any, index?:number, childProperty?:array) => void|any)
     
 ### Example 1 - populating 3x3 array with incremental integers from 1 to 9
 
