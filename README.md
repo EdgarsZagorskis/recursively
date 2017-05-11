@@ -1,7 +1,7 @@
 Recursively JavaScript
 ==========
 
-[![Build Status](https://travis-ci.org/EdgarsZagorskis/recursively.svg?branch=master)](https://travis-ci.org/EdgarsZagorskis/recursively)
+[![Build Status](https://travis-ci.org/EdgarsZagorskis/recursively.svg?branch=master)](https://travis-ci.org/EdgarsZagorskis/recursively) [![Coverage Status](https://coveralls.io/repos/github/EdgarsZagorskis/recursively/badge.svg)](https://coveralls.io/github/EdgarsZagorskis/recursively)
 
 Recursively run JavaScript callback function on each item in an array.
 
